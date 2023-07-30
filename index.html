@@ -16,7 +16,8 @@
     />
   </head>
   <body>
-    <section class="main">
+    <main>
+      <!--  Header -->
       <div class="header">
         <div class="logo">
           <a href="#">morent</a>
@@ -57,8 +58,107 @@
           </div>
         </div>
       </div>
-      <div class="cars-center"></div>
-    </section>
+      <!-- ? container -->
+      <div class="container">
+        <!-- Hero -->
+        <section class="hero">
+          <div id="ads1">
+            <div class="hero__title">
+              <div class="ads__header">
+                <p>The Best Platform for Car Rental</p>
+              </div>
+              <div class="ads__description">
+                <p>
+                  Ease of doing a car rental safely and reliably. Of course at a
+                  low price.
+                </p>
+              </div>
+              <button class="ads1__btn btn btn-medium--primary">
+                Rental Car
+              </button>
+            </div>
+            <div class="ads__img">
+              <img src="./assets/images/car1.png" alt="" />
+            </div>
+          </div>
+          <div id="ads2">
+            <div class="hero__title">
+              <div class="ads__header">
+                <p>Easy way to rent a car at a low price</p>
+              </div>
+              <div class="ads__description">
+                <p>
+                  Providing cheap car rental services and safe and comfortable
+                  facilities.
+                </p>
+              </div>
+              <button class="ads2__btn btn btn-medium--primary">
+                Rental Car
+              </button>
+            </div>
+            <div class="ads__img">
+              <img src="./assets/images/car2.png" alt="" />
+            </div>
+          </div>
+        </section>
+        <section class="rent__section">
+          <div class="pick__up">
+            <label class="pick-radio" for="pick">
+              <input type="radio" id="pick" checked />Pick-Up
+            </label>
+            <div class="pick__details">
+              <div class="rent__locations">
+                <p>Locations</p>
+                <select name="location" id="pick-location">
+                  <option value="">Select your city</option>
+                  <option value="london">London</option>
+                  <option value="newyork">NewYork</option>
+                  <option value="japon">Japon</option>
+                  <option value="korea">Korea</option>
+                </select>
+              </div>
+              <div class="rent__date">
+                <p>Date</p>
+                <input type="date" id="pick-date" />
+              </div>
+              <div class="rent__time">
+                <p>Time</p>
+                <input type="time" id="pick-time" />
+              </div>
+            </div>
+          </div>
+          <div class="swap">
+            <img src="./assets/images/iconly-light-swap.svg" alt="" />
+          </div>
+          <div class="drop__off">
+            <label class="drop-radio" for="drop">
+              <input type="radio" id="drop" checked />Drop-Off
+            </label>
+            <div class="drop__details">
+              <div class="rent__locations">
+                <p>Locations</p>
+                <select name="location" id="drop-location">
+                  <option value="">Select your city</option>
+                  <option value="london">London</option>
+                  <option value="newyork">NewYork</option>
+                  <option value="japon">Japon</option>
+                  <option value="korea">Korea</option>
+                </select>
+              </div>
+              <div class="rent__date">
+                <p>Date</p>
+                <input type="date" id="drop-date" />
+              </div>
+              <div class="rent__time">
+                <p>Time</p>
+                <input type="time" id="drop-time" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="cars-center"></div>
+      </div>
+    </main>
     <script type="module" src="./app.js"></script>
   </body>
 </html>
