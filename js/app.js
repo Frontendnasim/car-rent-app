@@ -1,5 +1,11 @@
 import { carsData } from "./cars.js";
 const carsDOM = document.querySelector(".cars-center");
+// Select options
+const optionMenu = document.querySelector(".select__menu");
+const selectBtn = document.querySelector(".select__btn");
+const options = document.querySelectorAll(".option");
+const selectBtnText = document.querySelector(".select__btn-text");
+const mainBody = document.body;
 
 class Cars {
   getCars() {
@@ -71,3 +77,26 @@ document.addEventListener("DOMContentLoaded", () => {
   Storage.saveCars(carsData);
   // console.log(carsData);
 });
+
+// Select Option Menu
+selectBtn.addEventListener("click", () =>
+  optionMenu.classList.toggle("active")
+);
+
+options.forEach((option) => {
+  option.addEventListener("click", (e) => {
+    const selectedOption = e.target.innerText;
+    selectBtnText.innerText = selectedOption;
+    optionMenu.classList.remove("active");
+  });
+});
+
+// mainBody.forEach((select) => {
+//   select.addEventListener("blur", () => {
+//     optionMenu.classList.remove("active");
+//   });
+// });
+
+// optionMenu.addEventListener("blur", () => {
+//   optionMenu.classList.remove("active");
+// });

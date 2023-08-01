@@ -11,6 +11,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap"
       rel="stylesheet"
     />
@@ -19,39 +23,43 @@
     <main>
       <!--  Header -->
       <div class="header">
-        <div class="logo">
-          <a href="#">morent</a>
-        </div>
-        <div class="search">
-          <button type="submit" class="search-icon">
-            <img src="./assets/images/search-normal.svg" alt="" />
-          </button>
-          <input type="search" placeholder="Search something here" />
-          <button type="submit" class="filter-icon">
-            <img src="./assets/images/vuesax-linear-filter.svg" alt="" />
-          </button>
-        </div>
-        <div class="navigation">
-          <div class="favorites">
-            <button>
-              <img src="./assets/images/vuesax-bold-heart.svg" alt="" />
+        <div class="header__left">
+          <div class="logo">
+            <a href="#">morent</a>
+          </div>
+          <div class="search">
+            <button type="submit" class="search-icon">
+              <img src="./assets/images/search-normal.svg" alt="" />
+            </button>
+            <input type="search" placeholder="Search something here" />
+            <button type="submit" class="filter-icon">
+              <img src="./assets/images/vuesax-linear-filter.svg" alt="" />
             </button>
           </div>
-          <div class="notifications">
-            <div class="notif-badge">
-              <div class="notif"></div>
+        </div>
+        <div class="nav__bar">
+          <div class="navigation">
+            <div class="favorites">
               <button>
-                <img
-                  src="./assets/images/vuesax-bold-notification.svg"
-                  alt=""
-                />
+                <img src="./assets/images/vuesax-bold-heart.svg" alt="" />
               </button>
             </div>
-          </div>
-          <div class="settings">
-            <button>
-              <img src="./assets/images/vuesax-bold-setting-2.svg" alt="" />
-            </button>
+            <div class="notifications">
+              <div class="notif-badge">
+                <div class="notif"></div>
+                <button>
+                  <img
+                    src="./assets/images/vuesax-bold-notification.svg"
+                    alt=""
+                  />
+                </button>
+              </div>
+            </div>
+            <div class="settings">
+              <button>
+                <img src="./assets/images/vuesax-bold-setting-2.svg" alt="" />
+              </button>
+            </div>
           </div>
           <div class="profile">
             <img src="./assets/images/profile.png" alt="" />
@@ -109,17 +117,27 @@
             <div class="pick__details">
               <div class="rent__locations">
                 <p>Locations</p>
-                <select name="location" id="pick-location">
-                  <option value="">Select your city</option>
-                  <option value="london">London</option>
-                  <option value="newyork">NewYork</option>
-                  <option value="japon">Japon</option>
-                  <option value="korea">Korea</option>
-                </select>
+                <div class="select__menu">
+                  <div class="select__btn">
+                    <span class="select__btn-text">Select your city</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </div>
+                  <ul class="options">
+                    <li class="option">London</li>
+                    <li class="option">New York</li>
+                    <li class="option">Japon</li>
+                    <li class="option">Korea</li>
+                    <li class="option">Paris</li>
+                  </ul>
+                </div>
               </div>
               <div class="rent__date">
                 <p>Date</p>
-                <input type="date" id="pick-date" />
+                <input
+                  type="date"
+                  id="pick-date"
+                  placeholder="Select your date"
+                />
               </div>
               <div class="rent__time">
                 <p>Time</p>
@@ -137,17 +155,27 @@
             <div class="drop__details">
               <div class="rent__locations">
                 <p>Locations</p>
-                <select name="location" id="drop-location">
-                  <option value="">Select your city</option>
-                  <option value="london">London</option>
-                  <option value="newyork">NewYork</option>
-                  <option value="japon">Japon</option>
-                  <option value="korea">Korea</option>
-                </select>
+                <div class="select__menu">
+                  <div class="select__btn">
+                    <span class="select__btn-text">Select your city</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </div>
+                  <ul class="options">
+                    <li class="option">London</li>
+                    <li class="option">New York</li>
+                    <li class="option">Japon</li>
+                    <li class="option">Korea</li>
+                    <li class="option">Paris</li>
+                  </ul>
+                </div>
               </div>
               <div class="rent__date">
                 <p>Date</p>
-                <input type="date" id="drop-date" />
+                <input
+                  type="date"
+                  id="drop-date"
+                  placeholder="Select your date"
+                />
               </div>
               <div class="rent__time">
                 <p>Time</p>
@@ -156,9 +184,72 @@
             </div>
           </div>
         </section>
-        <div class="cars-center"></div>
+        <section class="main__cars">
+          <div class="main__cars-title">
+            <p>Popular Car</p>
+            <p>View All</p>
+          </div>
+          <div class="cars-center"></div>
+        </section>
       </div>
+      <div class="show__more">
+        <button class="show__more-btn btn btn-large--primary">
+          Show more car
+        </button>
+        <p>120 Car</p>
+      </div>
+      <footer class="footer">
+        <div class="footer__main">
+          <div class="footer__left">
+            <div class="footer__logo">
+              <a href="#">morent</a>
+            </div>
+            <p>
+              Our vision is to provide convenience and help increase your sales
+              business.
+            </p>
+          </div>
+          <ul class="footer__right">
+            <li class="footer__right-box">
+              <h2 class="footer__box-header">About</h2>
+              <ul class="footer__box">
+                <li><a href="#">How it works</a></li>
+                <li><a href="#">Featured</a></li>
+                <li><a href="#">Partnership</a></li>
+                <li><a href="#">Business Relation</a></li>
+              </ul>
+            </li>
+            <li class="footer__right-box">
+              <h2 class="footer__box-header">Community</h2>
+              <ul class="footer__box">
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Podcast</a></li>
+                <li><a href="#">Invite a friend</a></li>
+              </ul>
+            </li>
+            <li class="footer__right-box">
+              <h2 class="footer__box-header">Socials</h2>
+              <ul class="footer__box">
+                <li><a href="#">Discord</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Facebook</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__bottom">
+          <div class="footer__rights">
+            <p>©2022 MORENT. All rights reserved</p>
+          </div>
+          <div class="footer__terms">
+            <p>Privacy & Policy</p>
+            <p>Terms & Condition</p>
+          </div>
+        </div>
+      </footer>
     </main>
-    <script type="module" src="./app.js"></script>
+    <script type="module" src="./js/app.js"></script>
   </body>
 </html>
